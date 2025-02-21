@@ -4,7 +4,7 @@ body::-webkit-scrollbar {
   }
   
   body::-webkit-scrollbar-track {
-    background: #4778ec;        /* el color de la zona de seguimiento */
+    background: #000511;        /* el color de la zona de seguimiento */
   }
   
   body::-webkit-scrollbar-thumb {
@@ -22,7 +22,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 20px;
-    background-color: #1d4bb4;
+    background-color: #01081a;
     color: #F8FAFC;
 }
 

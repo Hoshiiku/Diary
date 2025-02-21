@@ -2,6 +2,7 @@
 from flask import Flask, render_template,request, redirect
 # Conectando a la biblioteca de bases de datos
 from flask_sqlalchemy import SQLAlchemy
+from speech import audio_capture, translate_to_spanish
 
 
 app = Flask(__name__)
@@ -106,6 +107,17 @@ def card(id):
 @app.route('/create')
 def create():
     return render_template('create_card.html')
+
+@app.route("/voice")
+def voice():
+    try:
+        audio = audio_capture()
+        text = translate_to_spanish(audio)
+    
+    except:
+        text = "Couldn't understand the audio"
+    return render_template("create_card.html", text=text)
+    
 
 # El formulario de inscripción
 @app.route('/form_create', methods=['GET','POST'])
