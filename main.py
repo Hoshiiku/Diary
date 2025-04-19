@@ -30,8 +30,7 @@ class Card(db.Model):
     
 
 #Asignación #2. Crear la tabla Usuario
-
-
+#s
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement = True)
